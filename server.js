@@ -1,5 +1,5 @@
 ///////////////////////////////
-// DEPENDENCIES
+// DEPENDENCIES we need to import:
 ////////////////////////////////
 
 require("dotenv").config();
@@ -14,7 +14,7 @@ const app = express();
 
 // test route
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.send("hey Aubrey");
 });
 
 ///////////////////////////////
