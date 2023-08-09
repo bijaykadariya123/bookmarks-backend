@@ -1,5 +1,5 @@
 ///////////////////////////////
-// DEPENDENCIES
+// DEPENDENCIES we need to import:
 ////////////////////////////////
 
 require("dotenv").config();
