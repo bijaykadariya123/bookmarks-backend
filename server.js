@@ -1,5 +1,6 @@
 ///////////////////////////////
-// DEPENDENCIES we need to import:
+// DEPENDENCIES
+////////////////////////////////
 require("dotenv").config()
 const bookmarkroutes= require("./controller/routes")
 const { PORT = 3000,MONGODB_URL  } = process.env;
