@@ -46,7 +46,7 @@ app.use(express.json());
 // });
 
 // INDEX: - GET "/"
-app.get("/bookmarks", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const allBookmark = await Bookmark.find({});
     res.json(allBookmark);
@@ -56,7 +56,7 @@ app.get("/bookmarks", async (req, res) => {
 });
 
 // CREATE: - POST- "/"
-app.post("/bookmarks", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const oneBookmark = await Bookmark.create(req.body);
     res.json(oneBookmark);
@@ -66,7 +66,7 @@ app.post("/bookmarks", async (req, res) => {
 });
 
 // SHOW: GET; "/:id" -
-app.get("/bookmarks/:id", async (req, res) => {
+app.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const oneBookmark = await Bookmark.findById(id);
@@ -77,7 +77,7 @@ app.get("/bookmarks/:id", async (req, res) => {
 });
 
 // UPDATE - PUT - "/:id" -
-app.put("/bookmarks/:id", async (req, res) => {
+app.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const oneBookmark = await Bookmark.findByIdAndUpdate(id, req.body, {
@@ -90,7 +90,7 @@ app.put("/bookmarks/:id", async (req, res) => {
 });
 
 // DESTROY - DELETE - "/:id"
-app.delete("/bookmarks/:id", async (req, res) => {
+app.delete("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const oneBookmark = await Bookmark.findByIdAndDelete(id);
